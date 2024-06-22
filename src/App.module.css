@@ -1,0 +1,36 @@
+.app {
+  background-color: #2c2c2d;
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  text-align: center
+}
+
+.container {
+  display: flex;
+  max-width: 700px;
+  width: 700px;
+  max-height: 500px;
+  background-color: rgb(219, 230, 230);
+  padding: 30px;
+  border-radius: 10px;
+  gap: 40px;
+}
+
+.banner {
+  height: 300px;
+  border: solid 8px black
+}
+
+.box {
+  text-align: start;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  padding: 8px 13px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 35px;
+}
