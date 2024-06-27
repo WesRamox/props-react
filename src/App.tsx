@@ -3,6 +3,7 @@ import { Banner } from './components/Banner'
 import imagePoster from "./assets/banner.jpg" 
 import { User } from './components/User'
 import { users } from './data/users'
+import Profile from './components/Profile'
 
 function App() {
   return (
@@ -24,6 +25,18 @@ function App() {
           </div>
       ))}
       </div>
+      <div className="app">
+      <Profile
+        avatar="https://randomuser.me/api/portraits/men/75.jpg"
+        name="John Doe"
+        bio="Full-stack javascript"
+        email="john.doe@email.com"
+        phone="+5511987654321"
+        githubUrl="https://github.com"
+        linkedinUrl="https://linkedin.com"
+        twitterUrl="https://twitter.com"
+      />
+    </div>
     </div>
   )
 }
