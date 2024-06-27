@@ -1,4 +1,6 @@
-export const users = [
+import { User } from "./interfaces/User"
+
+export const users: User[] = [
   {
     username: 'Lucas',
     role: 'Member',
@@ -6,7 +8,7 @@ export const users = [
   },
   {
     username: 'Yasmim',
-    role: 'Member',
+    role: 'Admin',
     image: 'https://randomuser.me/api/portraits/lego/9.jpg'
   },
   {
