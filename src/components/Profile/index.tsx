@@ -3,17 +3,31 @@ import ProfileSection from "./ProfileSection"
 import LinkButton from "../LinkButton"
 import styles from "./styles.module.css"
 import { ProfileProps } from "./interfaces/Profile"
-
+import { useState } from "react"
 
 
 export default function Profile(props: ProfileProps) {
+  const [followText, setFollowText] = useState("Follow")
+  function handleClick() {
+    if(followText === "Follow") {
+      setFollowText("Following")
+      alert("Seguindo")
+    } else {
+      setFollowText("Follow")
+      alert("Parando de Seguir")
+    }
+  }
   return (
     <div className={styles.container}>
       <img className={styles.avatar} src={props.avatar} alt={props.name} />
       <Title>
-        <span>Name: </span>
         {props.name}
-        <button>Follow</button>
+        <button
+          className={styles.followButton}
+          onClick={handleClick}
+        >
+          {followText}
+        </button>
       </Title>
       <ProfileSection>{props.bio}</ProfileSection>
       <ProfileSection>{props.phone}</ProfileSection>
